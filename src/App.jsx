@@ -1,5 +1,6 @@
 import Navbar from './component/Navbar'
 import Herro from './component/Herro'
+import Stat from './component/Stat'
 import './App.css'
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
      
      <Navbar></Navbar>
      <Herro></Herro>
-      
+      <Stat></Stat>
     </>
   )
 }
