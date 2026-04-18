@@ -1,0 +1,135 @@
+[
+  {
+    "id": 1,
+    "title": "ChatGPT",
+    "description": "Advanced conversational AI for text, coding, and learning.\nSupports multiple tasks including writing, analysis, and problem-solving.",
+    "price": 20,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Conversational AI",
+      "Code generation",
+      "Content writing",
+      "Problem solving",
+      "Multi-language support"
+    ],
+    "icon": "MessageSquare",
+    "image": "https://i.ibb.co/8DNqfMQS/chatgpt.png",
+    "status": "popular"
+  },
+  {
+    "id": 2,
+    "title": "Midjourney",
+    "description": "AI-powered image generation tool from text prompts.\nCreates high-quality, artistic visuals in seconds.",
+    "price": 10,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "Text-to-image generation",
+      "High-quality artwork",
+      "Creative styles",
+      "Discord integration",
+      "Fast rendering"
+    ],
+    "icon": "Image",
+    "image": "https://i.ibb.co/ZzHw9whc/midjourney.png",
+    "status": "mostwanted"
+  },
+  {
+    "id": 3,
+    "title": "Canva AI",
+    "description": "Design platform with built-in AI tools for content creation.\nGenerate graphics, presentations, and social media posts easily.",
+    "price": 0,
+    "period": "monthly",
+    "tag": "favourite",
+    "tagType": "favourite",
+    "features": [
+      "100+ templates",
+      "AI design suggestions",
+      "Drag and drop editor",
+      "Presentation builder",
+      "Social media tools"
+    ],
+    "icon": "Palette",
+    "image": "https://i.ibb.co/B5MsPFrF/canva.webp",
+    "status": "favourite"
+  },
+  {
+    "id": 4,
+    "title": "Grammarly",
+    "description": "AI writing assistant for grammar, clarity, and tone.\nImproves emails, essays, and professional documents.",
+    "price": 12,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Grammar checking",
+      "Tone detection",
+      "Plagiarism checker",
+      "Real-time suggestions",
+      "Browser extension"
+    ],
+    "icon": "SpellCheck",
+    "image": "https://i.ibb.co/sdXvp5sS/grammerly.png",
+    "status": "popular"
+  },
+  {
+    "id": 5,
+    "title": "Notion AI",
+    "description": "Smart productivity tool with AI writing and summarization.\nHelps manage notes, tasks, and documents efficiently.",
+    "price": 10,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "Note taking",
+      "AI summarization",
+      "Task management",
+      "Database organization",
+      "Team collaboration"
+    ],
+    "icon": "FileText",
+    "image": "https://i.ibb.co/WW8vwGgG/notion.png",
+    "status": "favourite"
+  },
+  {
+    "id": 6,
+    "title": "Jasper AI",
+    "description": "AI content generator for marketing and copywriting.\nCreates blogs, ads, and social media content quickly.",
+    "price": 39,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "Marketing copy",
+      "Blog generation",
+      "SEO optimization",
+      "Templates library",
+      "Brand voice control"
+    ],
+    "icon": "PenTool",
+    "image": "https://i.ibb.co/WvqBLV4D/jasper.jpg",
+    "status": "mostwanted"
+  },
+  {
+    "id": 7,
+    "title": "DALL·E",
+    "description": "AI tool that generates images from text descriptions.\nProduces creative and realistic visuals instantly.",
+    "price": 15,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Text-to-image",
+      "Creative generation",
+      "High resolution output",
+      "Concept art creation",
+      "Easy prompt system"
+    ],
+    "icon": "Sparkles",
+    "image": "https://i.ibb.co/G4T4jxMN/dalle.png",
+    "status": "popular"
+  }
+]
