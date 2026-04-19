@@ -21,7 +21,14 @@ const Cartsection = ({ selectedtools, setselectedtools,settotal,total }) => {
           </div>
 
 
-          <button className='font-bold text-[16px] text-[#FF3980]'>remove</button>
+          <button
+          onClick={() => {
+  settotal(prev => prev - Number(card.price));
+  setselectedtools(prev =>
+      prev.filter((_, i) => i !== index)
+    );
+}}
+           className='font-bold text-[16px] text-[#FF3980]'>remove</button>
         </div>
       ))}
 

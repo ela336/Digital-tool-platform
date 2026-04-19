@@ -7,12 +7,12 @@ import Cartsection from './Cartsection';
 
 
 
-const Tools = ( {datapromise,type,settype} ) => {
+const Tools = ( {datapromise,type,settype,selectedtools,setselectedtools} ) => {
     const cards=use(datapromise);
     const[total,settotal]=useState(0);
     
     
-    const[selectedtools,setselectedtools]=useState([]);
+   
   console.log(selectedtools);
 
     return (

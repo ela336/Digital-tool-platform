@@ -3,7 +3,7 @@ import { ShoppingCart } from "lucide-react";
 
 
 
-const Navbar = () => {
+const Navbar = ({selectedtools, setselectedtools}) => {
     return (
         
       
@@ -28,7 +28,8 @@ const Navbar = () => {
 
   {/* Right */}
   <div className="navbar-end flex items-center  gap-5  font-semibold">
-    <ShoppingCart />
+    <ShoppingCart  />
+   {selectedtools.length !=0 && <div className='bg-red-600 text-white w-4 h-4 font-bold text-[12px] flex items-center justify-center rounded-full relative bottom-2.5 right-8'> {selectedtools.length}</div>}
     <a href="">Login</a>
     <button className="btn  bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-3xl">Get Started</button>
   </div>
