@@ -1,30 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Check } from "lucide-react";
 import { use } from "react";
+import Cartsection from './Cartsection';
 
 
 
 
-const Tools = ( {datapromise} ) => {
+
+const Tools = ( {datapromise,type,settype} ) => {
     const cards=use(datapromise);
-    console.log(cards);
+    const[total,settotal]=useState(0);
+    
+    
+    const[selectedtools,setselectedtools]=useState([]);
+  console.log(selectedtools);
+
     return (
         <>
         <div className='text-center mt-22 space-y-4'>
             <h3 className='font-extrabold text-[48px] '>Premium Digital Tools</h3>
             <p className='text-[16px] font-normal text-[#627382] text-center' >Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity.</p>
             <div className='flex items-center justify-center gap-6 container mx-auto mt-8'>
-                <button className='bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white font-bold py-2 px-4 rounded-3xl text-[16px] font-medium'>Products</button>
-                <button className='text-[16px] font-medium'>Cart</button>
+                <button onClick={()=> settype("Products")}
+                className={` ${type === "Products"?" bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white ":" bg-white text-black"}  font-bold py-2 px-4 rounded-3xl text-[16px] `}>Products</button>
+                <button onClick={()=> settype("cart")}
+                 className={` ${type ==="cart"?"bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white" :" bg-white text-black"} font-bold py-2 px-4 rounded-3xl text-[16px] `}>Cart({selectedtools.length})</button>
             </div>
             
         </div>
-        <div className='grid grid-cols-3 gap-6 w-[80%] container mx-auto mt-12'>
+
+       {type==="Products" ?
+        (<div className='grid grid-cols-3 gap-6 w-[80%] container mx-auto mt-12'>
            {cards.map((card, index) =>
             <div key={index} className='rounded-3xl border border-[#b5bdc5] p-6 space-y-4'>
                                     <div className='flex justify-between items-center' >
                                        <div className='rounded-full border border-[#c8d0d7] flex items-center justify-center w-14 h-14'> <img src={card.image} alt={card.title} width="40px" height="40px" /></div>
-                                        <div className='bg-blue-400 rounded-3xl p-2'>{card.status}</div>
+                                        <div className='bg-blue-300 text-blue-700 rounded-3xl p-2'>{card.status}</div>
                                         </div>
                                         <div>
                                             <h3 className='text-[24px] font-bold mb-3'>{card.title}</h3>
@@ -44,11 +55,21 @@ const Tools = ( {datapromise} ) => {
     </div>
   ))}
 </div>
-                                        <button className='btn btn-primary rounded-3xl w-full'>Buy Now</button>
+                                        <button 
+                                        onClick={()=>{ 
+                                          setselectedtools([...selectedtools, card]);
+                                           settotal(prev => prev + Number(card.price));
+                                      
+                                        }}
+                                        className='btn btn-primary rounded-3xl w-full'>Buy Now</button>
+                                        
                                     
                                 </div>
            )}
-        </div>
+        </div>) :
+
+
+        ( <Cartsection selectedtools={selectedtools} setselectedtools={setselectedtools}  settotal={settotal} total={total}></Cartsection>)}
 
         
         </>

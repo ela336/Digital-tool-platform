@@ -4,6 +4,7 @@ import Stat from './component/Stat'
 import Tools from './component/Tools'
 import Steps from './component/Steps'
 import Footer from './component/Footer'
+import { useState } from "react";
 
 import './App.css'
 
@@ -17,16 +18,18 @@ const getdata = async()=>{
 const datapromise = getdata();
 
 function App() {
+  const[type,settype]= useState("Products");
+  console.log(type);
   
 
   return (
     <>
      
      <Navbar></Navbar>
-     <Herro></Herro>
-      <Stat></Stat>
-      <Tools datapromise={datapromise}></Tools>
-      <Steps></Steps>
+     {type !="cart" && <Herro></Herro>}
+     {type !="cart" && <Stat></Stat>}
+      <Tools datapromise={datapromise} type={type} settype={settype}></Tools>
+     {type !="cart" && <Steps></Steps>}
       <Footer></Footer>
     </>
   )
