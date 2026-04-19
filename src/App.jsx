@@ -5,6 +5,8 @@ import Tools from './component/Tools'
 import Steps from './component/Steps'
 import Footer from './component/Footer'
 import { useState } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import './App.css'
 
@@ -32,6 +34,9 @@ function App() {
       <Tools datapromise={datapromise} type={type} settype={settype} selectedtools={selectedtools} setselectedtools={setselectedtools}></Tools>
      {type !="cart" && <Steps></Steps>}
       <Footer></Footer>
+
+
+      <ToastContainer />
     </>
   )
 }

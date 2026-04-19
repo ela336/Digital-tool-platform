@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+
 import Empty from './Empty';
+import { toast } from "react-toastify";
 
 const Cartsection = ({ selectedtools, setselectedtools,settotal,total }) => {
 
     
   return (
-    <div className='border border-gray-300 p-6 m-30 rounded-2xl '>
+    <div className='border border-gray-300 p-3 md:p-6 m-5 md:m-30 rounded-2xl '>
       <h3 className='mb-4 text-[24px] font-bold'>Your Cart</h3>
 
       {selectedtools.map((card, index) => (
@@ -15,7 +16,7 @@ const Cartsection = ({ selectedtools, setselectedtools,settotal,total }) => {
           <img src={card.image} alt={card.title}  />
           </div>
           <div>
-            <h3 className='font-semibold text-[20px]'>{card.title}</h3>
+            <h3 className='font-semibold text-[15px] md:text-[20px]'>{card.title}</h3>
             <p className='text-[16px] font-medium text-[#627382]'>${card.price}</p>
           </div>
           </div>
@@ -26,7 +27,9 @@ const Cartsection = ({ selectedtools, setselectedtools,settotal,total }) => {
   settotal(prev => prev - Number(card.price));
   setselectedtools(prev =>
       prev.filter((_, i) => i !== index)
+
     );
+     toast(`${card.title} is removed from cart!`);
 }}
            className='font-bold text-[16px] text-[#FF3980]'>remove</button>
         </div>
@@ -50,6 +53,7 @@ const Cartsection = ({ selectedtools, setselectedtools,settotal,total }) => {
         onClick={ ()=>{
             setselectedtools([]);
             settotal(0);
+             toast("All items has benn removed");
 
         }
         }

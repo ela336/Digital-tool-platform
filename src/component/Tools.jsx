@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Check } from "lucide-react";
 import { use } from "react";
 import Cartsection from './Cartsection';
+import { toast } from "react-toastify";
 
 
 
@@ -30,7 +31,7 @@ const Tools = ( {datapromise,type,settype,selectedtools,setselectedtools} ) => {
         </div>
 
        {type==="Products" ?
-        (<div className='grid grid-cols-3 gap-6 w-[80%] container mx-auto mt-12'>
+        (<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full md:w-[80%] container mx-auto mt-12'>
            {cards.map((card, index) =>
             <div key={index} className='rounded-3xl border border-[#b5bdc5] p-6 space-y-4'>
                                     <div className='flex justify-between items-center' >
@@ -59,6 +60,9 @@ const Tools = ( {datapromise,type,settype,selectedtools,setselectedtools} ) => {
                                         onClick={()=>{ 
                                           setselectedtools([...selectedtools, card]);
                                            settotal(prev => prev + Number(card.price));
+
+                                           
+                                           toast(`${card.title} is added to cart!`);
                                       
                                         }}
                                         className='btn btn-primary rounded-3xl w-full'>Buy Now</button>
