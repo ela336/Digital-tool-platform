@@ -29,7 +29,7 @@ const Cartsection = ({ selectedtools, setselectedtools,settotal,total }) => {
       prev.filter((_, i) => i !== index)
 
     );
-     toast(`${card.title} is removed from cart!`);
+     toast.error(`${card.title} is removed from cart!`);
 }}
            className='font-bold text-[16px] text-[#FF3980]'>remove</button>
         </div>
@@ -53,7 +53,7 @@ const Cartsection = ({ selectedtools, setselectedtools,settotal,total }) => {
         onClick={ ()=>{
             setselectedtools([]);
             settotal(0);
-             toast("All items has benn removed");
+             toast.success("All items has been removed");
 
         }
         }

@@ -1,5 +1,8 @@
 import React from 'react';
 import { Play } from "lucide-react";
+import heroimage from "../assets/banner.png"
+
+
 
 const Herro = () => {
     return (
@@ -23,7 +26,7 @@ const Herro = () => {
                 </div>
         </div>
         <div className='p-6 w-full'>
-          <img src="/assets/banner.png" />
+          <img src={heroimage} alt="" />
         </div>
        </div>
     );

@@ -6,7 +6,7 @@ import Steps from './component/Steps'
 import Footer from './component/Footer'
 import { useState } from "react";
 import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 
 import './App.css'
 
